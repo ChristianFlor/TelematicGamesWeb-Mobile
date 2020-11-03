@@ -1,0 +1,63 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 19-05-2020 a las 09:36:05
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.4.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `telematicgames`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `videogames`
+--
+
+CREATE TABLE `videogames` (
+  `id` varchar(38) COLLATE utf8_spanish2_ci NOT NULL,
+  `name` varchar(40) COLLATE utf8_spanish2_ci DEFAULT NULL,
+  `studio` varchar(20) COLLATE utf8_spanish2_ci DEFAULT NULL,
+  `yearOfRelease` varchar(10) COLLATE utf8_spanish2_ci DEFAULT NULL,
+  `numberVotes` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `videogames`
+--
+
+INSERT INTO `videogames` (`id`, `name`, `studio`, `yearOfRelease`, `numberVotes`) VALUES
+('2b733e08-b736-44ed-92a3-d168f655d468', 'Legend of Zelda Breath of the Wild', 'Epic', '2016', 2),
+('2d10bfe0-4114-408f-9caa-d39a72d2a322', 'Red dead redemption II', 'Epic', '2018', 0),
+('3ab194d5-e2b4-49b0-b727-8b0a42b9ffcd', 'Minecraft', 'Epic', '2010', 2),
+('8eb0b328-f626-4ea9-bd43-413cd3abf3d2', 'GTA V', 'Epic', '2018', 1),
+('9c92633b-30b1-47f4-9e9e-a9f664064352', 'Halo', 'Epic', '2010', 1);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `videogames`
+--
+ALTER TABLE `videogames`
+  ADD PRIMARY KEY (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
