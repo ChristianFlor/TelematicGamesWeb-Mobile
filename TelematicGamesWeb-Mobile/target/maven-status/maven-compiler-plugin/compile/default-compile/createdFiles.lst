@@ -1,0 +1,5 @@
+services\VideogameServices.class
+db\ConnectionPool.class
+config\ApplicationConfig.class
+db\Database.class
+entities\Videogame.class
